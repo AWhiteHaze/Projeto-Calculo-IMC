@@ -1,0 +1,155 @@
+*{
+    margin: auto;
+    padding: auto;
+}
+.fundo{
+ background-image: linear-gradient(45deg, black,gray, rgb(99, 74, 74), red,rgb(238, 25, 17));
+ height: 100vh;
+ color: white;
+ font-family:sans-serif;
+ 
+
+}
+.calculadora{
+    position: absolute;
+    background-color: rgba(0, 0, 0, .3);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    padding: 100px;
+    width: 400px;
+    height: 500px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    transition: all 0.3s ease-in-out;
+  
+    
+}
+.input{
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(255, 255, 255, .3);
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+button {
+    --glow-color:rgb(231, 48, 48);
+    --glow-spread-color: rgb(231, 85, 85);
+    --enhanced-glow-color: rgb(206, 78, 78);
+    --btn-color: rgb(190, 46, 46);
+    border: 0.25em solid var(--glow-color);
+    padding: 1em 3em;
+    color: var(--glow-color);
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em 0.25em var(--glow-color),
+      0 0 4em 1em var(--glow-spread-color),
+      inset 0 0 0.74em 0.25em var(--glow-color);
+    text-shadow: 0 0 0.5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+  }
+  .bg{ 
+    background-image: linear-gradient(45deg, black,gray, rgb(99, 74, 74), red,rgb(238, 25, 17));
+    
+    border: 0.25em solid var(--glow-color);
+    padding: 1em 3em;
+    color: var(--glow-color);
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 20px;
+    color: white;
+    --glow-color:rgb(231, 48, 48);
+    --glow-spread-color: rgb(231, 85, 85);
+    --enhanced-glow-color: rgb(206, 78, 78);
+    --btn-color: rgb(190, 46, 46);
+  }
+  
+
+  button::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: 0.7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
+  }
+
+  button:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em 0.25em var(--glow-color),
+    0 0 4em 2em var(--glow-spread-color),
+    inset 0 0 0.75em 0.25em var(--glow-color);
+  }
+
+  button:active {
+    box-shadow: 0 0 0.6em 0.25em var(--glow-color),
+    0 0 2.5em 2em var(--glow-spread-color),
+    inset 0 0 0.5em 0.25em var(--glow-color);
+  }
+  
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: rgb(82, 70, 70);
+    color: white;
+    background-image: linear-gradient(45deg, black,gray, rgb(99, 74, 74), red,rgb(238, 25, 17));
+
+  }
+
+
+  @media only screen and (max-width: 1080px){
+    body{
+        flex-wrap: wrap;
+        background-size: cover;
+        background-position: center;
+        
+    }
+    .calculadora{
+        width: 50%;
+        height: 50%;
+        padding: 20px;
+        border-radius: 20;
+        box-shadow: none;
+        position: absolute;
+        background-color: rgba(0, 0, 0, .3);
+        padding: 100px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+    }
+    .fundo{
+        background-size: cover;
+        background-position: center;
+        background-image: linear-gradient(45deg, black,gray, rgb(99, 74, 74), red,rgb(238, 25, 17));
+        height: 100vh;
+        color: white;
+        font-family:sans-serif;
+        
+       
+    }
+
+}
+    
